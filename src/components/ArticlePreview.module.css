@@ -1,0 +1,115 @@
+@import '../variables.css';
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background: var(--clr-lightGrayishBlue);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px 0 rgba(72, 85, 106, 0.15);
+  max-width: 730px;
+  margin: 10vh auto;
+  overflow: hidden;
+}
+
+.imageSection {
+  flex: 1 1 285px;
+  min-width: 285px;
+  max-width: 285px;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contentSection {
+  flex: 2 1 445px;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--clr-veryDarkGrayishBlue);
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.description {
+  color: var(--clr-desaturatedDarkBlue);
+  font-family: var(--ff-base);
+  font-size: var(--font-paragraph);
+  margin-bottom: 2rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.authorName {
+  display: block;
+  color: var(--clr-veryDarkGrayishBlue);
+  font-weight: var(--fw-bold);
+  font-size: 0.95rem;
+}
+
+.date {
+  display: block;
+  color: var(--clr-grayishBlue);
+  font-size: 0.9rem;
+}
+
+.shareButton {
+  background: var(--clr-lightGrayishBlue);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.shareButton:hover,
+.shareButton:focus {
+  background: var(--clr-grayishBlue);
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    max-width: 90vw;
+    margin: 2rem auto;
+  }
+  .imageSection {
+    min-width: 100%;
+    max-width: 100%;
+    height: 200px;
+  }
+  .contentSection {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+} 
